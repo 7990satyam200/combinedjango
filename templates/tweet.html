@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+
+
+{% block content %}
+
+<div class="container">
+{% for post in object_list %}
+<h1><a href="{% url 'twit_detail' post.pk %}">{{ post.tweet }}</a></h1>
+<p>{{post.date}}</p>
+<a href="{% url 'twit_edit' post.pk %}">Edit</a>
+<a href="{% url 'twit_delete' post.pk %}">Delete</a>
+<a href="">{{ post.author }}</a>
+
+ {% endfor %}
+</div>
+{% endblock content %}

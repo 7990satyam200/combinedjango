@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>Hello WOrld</h1>
+{% if user.is_authenticated %}
+<ul>
+<li>first name: {{ user.first_name }}!</li>
+<li>last name: {{ user.last_name }}!</li>
+<li>email: {{ user.email }}!</li>
+
+{% endif %}
+
+
+</ul>
+{% endblock content %}

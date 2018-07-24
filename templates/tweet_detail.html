@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+{% load static %} <!-- New line -->
+
+<h1> {{post.tweet}}</h1>
+<p><a href="{% url 'twit_edit' post.pk %}"> Edit</a></p>
+
+<img src="{{ twit.profile.url }}" alt="Picture of Rango" /> <!-- New line -->
+<h5> {{post.author}}</h5>
+
+{% endblock content %}

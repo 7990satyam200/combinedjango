@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% block content %}
+<p><a href="{% url 'new' %}">new blog <a></p>
+  <p><a href="{% url 'signup' %}">new blog <a></p>
+
+<h5>{{news.new_title}}</h5>
+<p>{{news.new_body}}</p>
+
+{% endblock content %}
